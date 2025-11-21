@@ -32,8 +32,7 @@ def get_port_mappings():
                         "container_port": port_number,
                         "protocol": protocol,
                         "host_ip": mapping.get("HostIp"),
-                        "host_port": mapping.get("HostPort"),
-                        "labels": labels
+                        "host_port": mapping.get("HostPort")
                     })
             else:
                 results.append({
@@ -46,8 +45,7 @@ def get_port_mappings():
                     "container_port": port_number,
                     "protocol": protocol,
                     "host_ip": "-",
-                    "host_port": "-",
-                    "labels": labels
+                    "host_port": "-"
                 })
 
     return results

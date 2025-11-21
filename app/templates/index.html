@@ -33,7 +33,6 @@
                 <th>Protocol</th>
                 <th>Host IP</th>
                 <th>Host Port</th>
-                <th>Labels</th>
                 <th>Networks</th>
                 <th>Created</th>
                 <th>Started</th>
@@ -48,15 +47,6 @@
                   <td><span class="badge bg-info text-dark">{{ row.protocol }}</span></td>
                   <td><span class="badge bg-light text-dark border">{{ row.host_ip }}</span></td>
                   <td><span class="badge bg-dark">{{ row.host_port }}</span></td>
-                  <td class="text-center">
-                      {% if row.labels and row.labels != {} %}
-                        {% for key, value in row.labels.items() %}
-                          <span class="badge bg-secondary">{{ key }}={{ value }}</span>
-                        {% endfor %}
-                      {% else %}
-                        <span class="text-muted d-block">-</span>
-                      {% endif %}
-                  </td>
                   <td><span class="badge bg-light text-dark border">{{ row.network }}</span></td>
                   <td><span class="timestamp">{{ row.created }}</span></td>
                   <td><span class="timestamp">{{ row.started }}</span></td>
